@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@use "src/assets/variables.scss" as VARS;
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700");
+
+/**********   SWIPER STYLES        **********/
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/swiper.min.css";
+@import "../node_modules/swiper/swiper-bundle.css";
+
+* {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.record-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  transition: opacity ease 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+  .card-cover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #222028;
+    img {
+      width: 100%;
+    }
+    .card-rate-green {
+      border-color: #29b474 !important;
+    }
+    .card-rate-yellow {
+      border-color: #ffc312 !important;
+    }
+    .card-rate-red {
+      border-color: #eb5757 !important;
+    }
+
+    .card-rate {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      top: 15px;
+      left: 15px;
+      background-color: rgba(26, 25, 31, 0.6);
+      border: 2px solid transparent;
+      border-radius: 50%;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    .card-title {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 400;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+  }
+}

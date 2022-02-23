@@ -1,0 +1,13 @@
+<div>
+    <h2 class="mb-3">MOVIES</h2>
+</div>
+<div class="container-fluid">
+    <div class="row">
+
+        <ng-container *ngFor="let movie of movies">
+            <div class="col-12 col-sm-4 col-md-3" (click)="getMovieDetails(movie.id)">
+                <app-record-card [record]="movie"></app-record-card>
+            </div>
+        </ng-container>
+    </div>
+</div>

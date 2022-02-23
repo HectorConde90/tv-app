@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-12">
+        <h1>{{record.name || record.title}}</h1>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="record-card">
+            <div class="card-cover">
+                <img src="{{IMAGE_URI}}/{{record.backdrop_path}}" alt="">
+                <span class="card-rate" [class]="calculateRate(record.vote_average)"> {{record.vote_average}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 card-content">
+        <p class="card-title">
+            {{record.overview}}
+        </p>
+
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-12">
+        <h2>Similar</h2>
+    </div>
+
+
+    <swiper [slidesPerView]="5">
+        <ng-template swiperSlide *ngFor="let record of similarRecord">
+            <div [routerLink]="['/', type, record.id]" class="card-swiper-container">
+                <app-record-card [record]="record"></app-record-card>
+            </div>
+        </ng-template>
+
+    </swiper>
+
+
+</div>

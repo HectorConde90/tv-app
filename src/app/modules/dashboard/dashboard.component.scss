@@ -1,0 +1,7 @@
+@use "src/assets/variables.scss" as VARS;
+
+.main {
+  background-color: VARS.$background;
+  min-height: 100vh;
+  padding: 2rem 0.5rem;
+}
